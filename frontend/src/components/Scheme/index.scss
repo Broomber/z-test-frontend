@@ -1,0 +1,27 @@
+.scheme {
+  &__svg-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.popup-trigger-box {
+  cursor: pointer;
+}
+
+.popups-list {
+  &__inner {
+    margin-bottom: 0;
+  }
+  &__item + &__item {
+    margin-top: -8px;
+  }
+  &__item {
+    position: absolute;
+    pointer-events: none;
+    display: none;
+    margin-top: -8px;
+    margin-left: -12px;
+  }
+}

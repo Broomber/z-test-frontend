@@ -1,46 +1,71 @@
-// @import url('https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i&subset=cyrillic-ext,latin-ext');
+// // @import url('https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i&subset=cyrillic-ext,latin-ext');
+
+// @font-face {
+// 	font-family: 'FranklinGothic';
+//     src: url('/local/templates/z-template/static/fonts/FranklinGothicMediumITC-Regular.eot');
+//     src: url('/local/templates/z-template/static/fonts/FranklinGothicMediumITC-Regular.eot?#iefix') format('embedded-opentype'),
+//         url('/local/templates/z-template/static/fonts/FranklinGothicMediumITC-Regular.woff2') format('woff2'),
+//         url('/local/templates/z-template/static/fonts/FranklinGothicMediumITC-Regular.woff') format('woff');
+// 	font-weight: 500;
+// }
+
+// @font-face {
+// 	font-family: 'FranklinGothic';
+//     src: url('/local/templates/z-template/static/fonts/FranklinGothicMediumITC-Italic.eot');
+//     src: url('/local/templates/z-template/static/fonts/FranklinGothicMediumITC-Italic.eot?#iefix') format('embedded-opentype'),
+//         url('/local/templates/z-template/static/fonts/FranklinGothicMediumITC-Italic.woff2') format('woff2'),
+//         url('/local/templates/z-template/static/fonts/FranklinGothicMediumITC-Italic.woff') format('woff');
+// 	font-weight: 500;
+// 	font-style: italic;
+// }
+
+// @font-face {
+// 	font-family: 'FranklinGothic';
+// 	src: url('/local/templates/z-template/static/fonts/e130d119682ecb567748343bf7f263b0.woff2') format('woff2');
+// 	font-weight: 400;
+// }
+
+// @font-face {
+// 	font-family: 'Humanist531CBT';
+//     src: url('/local/templates/z-template/static/fonts/Humanist531CBT.eot');
+//     src: url('/local/templates/z-template/static/fonts/Humanist531CBT.eot?#iefix') format('embedded-opentype'),
+//         url('/local/templates/z-template/static/fonts/Humanist531CBT.woff2') format('woff2'),
+//         url('/local/templates/z-template/static/fonts/Humanist531CBT.woff') format('woff');
+// 	font-weight: 400;
+// }
+
+// @font-face {
+// 	font-family: 'Humanist531CBT';
+//     src: url('/local/templates/z-template/static/fonts/Humanist531CBT-Bold.eot');
+//     src: url('/local/templates/z-template/static/fonts/Humanist531CBT-Bold.eot?#iefix') format('embedded-opentype'),
+//         url('/local/templates/z-template/static/fonts/Humanist531CBT-Bold.woff2') format('woff2'),
+//         url('/local/templates/z-template/static/fonts/Humanist531CBT-Bold.woff') format('woff');
+// 	font-weight: 600;
+// }
+
 
 @font-face {
-	font-family: 'FranklinGothic';
-    src: url('/local/templates/z-template/static/fonts/FranklinGothicMediumITC-Regular.eot');
-    src: url('/local/templates/z-template/static/fonts/FranklinGothicMediumITC-Regular.eot?#iefix') format('embedded-opentype'),
-        url('/local/templates/z-template/static/fonts/FranklinGothicMediumITC-Regular.woff2') format('woff2'),
-        url('/local/templates/z-template/static/fonts/FranklinGothicMediumITC-Regular.woff') format('woff');
-	font-weight: 500;
+	font-family: 'Roboto';
+		src: url('/local/templates/z-template/static/fonts/Roboto/Roboto-Regular.eot');
+		src: url('/local/templates/z-template/static/fonts/Roboto/Roboto-Regular.eot?#iefix') format('embedded-opentype'),
+		url('/local/templates/z-template/static/fonts/Roboto/Roboto-Regular.woff2') format('woff2'),
+		url('/local/templates/z-template/static/fonts/Roboto/Roboto-Regular.woff') format('woff'),
+		url('/local/templates/z-template/static/fonts/Roboto/Roboto-Regular.ttf') format('truetype'),
+		url('/local/templates/z-template/static/fonts/Roboto/Roboto-Regular.svg#Roboto-Regular') format('svg');
+	font-weight: normal;
+	font-style: normal
 }
 
 @font-face {
-	font-family: 'FranklinGothic';
-    src: url('/local/templates/z-template/static/fonts/FranklinGothicMediumITC-Italic.eot');
-    src: url('/local/templates/z-template/static/fonts/FranklinGothicMediumITC-Italic.eot?#iefix') format('embedded-opentype'),
-        url('/local/templates/z-template/static/fonts/FranklinGothicMediumITC-Italic.woff2') format('woff2'),
-        url('/local/templates/z-template/static/fonts/FranklinGothicMediumITC-Italic.woff') format('woff');
-	font-weight: 500;
-	font-style: italic;
-}
-
-@font-face {
-	font-family: 'FranklinGothic';
-	src: url('/local/templates/z-template/static/fonts/e130d119682ecb567748343bf7f263b0.woff2') format('woff2');
-	font-weight: 400;
-}
-
-@font-face {
-	font-family: 'Humanist531CBT';
-    src: url('/local/templates/z-template/static/fonts/Humanist531CBT.eot');
-    src: url('/local/templates/z-template/static/fonts/Humanist531CBT.eot?#iefix') format('embedded-opentype'),
-        url('/local/templates/z-template/static/fonts/Humanist531CBT.woff2') format('woff2'),
-        url('/local/templates/z-template/static/fonts/Humanist531CBT.woff') format('woff');
-	font-weight: 400;
-}
-
-@font-face {
-	font-family: 'Humanist531CBT';
-    src: url('/local/templates/z-template/static/fonts/Humanist531CBT-Bold.eot');
-    src: url('/local/templates/z-template/static/fonts/Humanist531CBT-Bold.eot?#iefix') format('embedded-opentype'),
-        url('/local/templates/z-template/static/fonts/Humanist531CBT-Bold.woff2') format('woff2'),
-        url('/local/templates/z-template/static/fonts/Humanist531CBT-Bold.woff') format('woff');
-	font-weight: 600;
+	font-family: 'Roboto';
+		src: url('/local/templates/z-template/static/fonts/Roboto/Roboto-Bold.eot');
+		src: url('/local/templates/z-template/static/fonts/Roboto/Roboto-Bold.eot?#iefix') format('embedded-opentype'),
+		url('/local/templates/z-template/static/fonts/Roboto/Roboto-Bold.woff2') format('woff2'),
+		url('/local/templates/z-template/static/fonts/Roboto/Roboto-Bold.woff') format('woff'),
+		url('/local/templates/z-template/static/fonts/Roboto/Roboto-Bold.ttf') format('truetype'),
+		url('/local/templates/z-template/static/fonts/Roboto/Roboto-Bold.svg#Roboto-Bold') format('svg');
+	font-weight: bold;
+	font-style: normal
 }
 
 html {
@@ -50,7 +75,8 @@ html {
 
 %text--body,
 .text--body {
-	font-family: 'Humanist531CBT', Helvetica, sans-serif;
+	// font-family: 'Humanist531CBT', Helvetica, sans-serif;
+	font-family: 'Roboto', 'Open Sans', 'Helvetica Neue', sans-serif;
 	font-weight: 400;
 	font-style: normal;
 	@include font-size($base-font-size);
@@ -77,8 +103,10 @@ ul ul, ol ol, ul ol, ol ul {
 
 h1, h2, h3, h4, h5, h6 {
 	// @include rem(margin-bottom, $base-font-size/2);
-	font-family: 'FranklinGothic', Helvetica, sans-serif;
-	font-weight: 500;
+	// font-family: 'FranklinGothic', Helvetica, sans-serif;
+	font-family: 'Roboto', 'Open Sans', 'Helvetica Neue', sans-serif;
+	// font-weight: 500;
+	font-weight: 400;
 	line-height: normal;
 	color: inherit;
 	margin-top: 1.5rem;
@@ -138,7 +166,7 @@ h6 {
 	font-weight: 600;
 	color: $base-text-color;
 	border-bottom: 2px solid $base-text-color;
-	
+
 	.caption__units {
 		font-weight: normal;
 	}
@@ -163,7 +191,7 @@ pre.xdebug-var-dump {
 	html {
 		font-size: 14px;
 	}
-	
+
 	%text--body,
 	.text--body {
 		font-size: 1.0715rem;
@@ -178,12 +206,12 @@ pre.xdebug-var-dump {
 	.lead {
 		font-size: 1.125rem;
 	}
-	
+
 	.header-1 {
 		@include font-size(34px);
 		line-height: 42px;
 	}
-	
+
 	.header-3 {
 		@include font-size(18px);
 	}

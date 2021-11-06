@@ -1,3 +1,108 @@
-<div>
-    list
-</div>
+<section class="news">
+    <div class="news__search">
+        <div class="news__search-container">
+            <div class="news-search">
+                <div class="news-search__fieldset">
+                    <div class="search-fieldset">
+                        <label for="q" class="search-fieldset__label">
+                            <input
+                                id="q"
+                                class="search-fieldset__input"
+                                name="q"
+                                type="text"
+                                autocomplete="off"
+                                placeholder="Поиск"
+                                v-model="searchText"
+                            >
+                            <svg class="search-fieldset__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="10.5" cy="10.5" r="5.5" stroke="#97999B" stroke-width="2"/>
+                                <path d="M18.8281 18.4854L14.9998 14.5001" stroke="#97999B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div v-if="isLoading" class="news__loading">
+        Загрузка...
+    </div>
+    <div v-if="!isLoading && isError" class="news__error">
+        При загрузке новостей произошла ошибка. Обновите страницу, если ошибка повторится, пожалуйста, свяжитесь с администрацией сайта
+    </div>
+    <div v-if="!isLoading && newsData.list.length == 0" class="news__empty">
+        Новости не найдены
+    </div>
+    <template v-if="!isLoading && newsData.list.length > 0">
+        <div class="news__list">
+            <div class="news-list">
+                <ul class="news-list__inner ul--clear">
+                    <li
+                        v-for="newsItem in newsData.list"
+                        :key="newsItem.id"
+                        :class="newsItem.spotlight ? 'news-list__item news-list__item--wide' : 'news-list__item'"
+                    >
+                        <article
+                            v-if="newsItem.spotlight"
+                            :id="'news-' + newsItem.id"
+                            class="news-item news-item--spotlight"
+                        >
+                            <a :href=newsItem.url :alt="newsItem.title" class="news-item__link">{{ newsItem.title }}</a>
+                            <div class="news-item__bg"
+                                :style="'background-image: url(' + newsItem.image + ');'"
+                            ></div>
+                            <div class="news-item__inner">
+                                <div class="news-item__date">{{ newsItem.date }}</div>
+                                <div class="news-item__tags">
+                                    <ul class="news-item__tags-inner ul--clear">
+                                        <li class="news-item__tags-item">
+                                            <div class="tag-item">В центре внимания</div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <h3 class="news-item__title">{{ newsItem.title }}</h3>
+                            </div>
+                        </article>
+                        <article
+                            v-else
+                            :id="'news-' + newsItem.id"
+                            class="news-item"
+                        >
+                            <a :href="newsItem.url" :alt="newsItem.title" class="news-item__link">{{ newsItem.title }}</a>
+                            <div class="news-item__inner">
+                                <div class="news-item__date">{{ newsItem.date }}</div>
+                                <h3 class="news-item__title">{{ newsItem.title }}</h3>
+                                <div
+                                    v-if="newsItem.theme.length > 0"
+                                    class="news-item__tags"
+                                >
+                                    <ul
+                                        class="news-item__tags-inner ul--clear"
+                                    >
+                                        <li
+                                            v-for="tagItem in newsItem.theme"
+                                            :key=tagItem
+                                            class="news-item__tags-item">
+                                            <div class="tag-item">{{ tagItem }}</div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </article>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="news__load-more">
+            <div class="news-load-more">
+                <div class="news-load-more__btn-wrapper">
+                    <button
+                        v-if="newsData.page.current < newsData.page.total"
+                        @click="fetchNewsMore"
+                        class="button button--primary"
+                    >Загрузить еще</button>
+                </div>
+            </div>
+        </div>
+    </template>
+</section>
